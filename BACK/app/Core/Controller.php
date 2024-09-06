@@ -11,13 +11,19 @@ class Controller {
      *
      * @param string $view Nom de la vue
      * @param array $data Données à passer à la vue
+     * @param string $view Nom de la vue
      */
-    protected function render($view, $data = []) {
+    protected function render($view, $data = [], $view2 = null) {
         extract($data);
-        $base_url = '/'; // Assurez-vous que cela pointe vers le bon URL
+        $base_url = '/BACK/public/'; // Assurez-vous que cela pointe vers le bon URL
         ob_start();
         require __DIR__ . '/../Views/' . $view . '.php';
         $content = ob_get_clean();
+        if($view2){
+            ob_start();
+            require __DIR__ . '/../Views/' . $view2 . '.php';
+            $content2 = ob_get_clean();
+        }
         require __DIR__ . '/../Views/layout.php';
     }
 

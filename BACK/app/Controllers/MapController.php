@@ -15,6 +15,6 @@ class MapController extends Controller {
     public function index() {
         $siteModel = new Site();
         $sites = $siteModel->getAllSites();
-        $this->render('map', ['sites' => $sites]);
+        $this->render('map', ['sites' => $sites], 'add_site');
     }
 }

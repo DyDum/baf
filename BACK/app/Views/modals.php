@@ -1,115 +1,93 @@
-
-<!-- Modal pour afficher les détails du site -->
-<div class="modal fade" id="siteModal" tabindex="-1" aria-labelledby="siteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<!-- Sign In Modal -->
+<div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="siteModalLabel">Détails du Site</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title" id="signinLabel">Sign In</h4>
             </div>
             <div class="modal-body">
-                <!-- Le contenu sera inséré ici via AJAX -->
-                <div id="siteDetailsContent"></div>
+                <form role="form">
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign In with Facebook</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign In with Google</a>
+                        </div>
+                    </div>
+                    <div class="signOr">OR</div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Email Address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Remember me</label></div>
+                            </div>
+                            <div class="col-xs-6 align-right">
+                                <p class="help-block"><a href="#" class="text-green">Forgot password?</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-green">Sign In</a>
+                        </div>
+                    </div>
+                    <p class="help-block">Don't have an account? <a href="#" class="modal-su text-green">Sign Up</a></p>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal pour ajouter un site -->
-<div class="modal fade" id="addSiteModal" tabindex="-1" aria-labelledby="addSiteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="addSiteModalLabel">Ajouter un site</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form id="addSiteForm">
-            <input type="hidden" name="csrf_token" value="<?= $this->generateCSRFToken() ?>">
-            <div class="form-group">
-                <label for="name">Nom du site</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="latitude">Latitude</label>
-                <input type="text" class="form-control" id="latitude" name="latitude" required>
-            </div>
-            <div class="form-group">
-                <label for="longitude">Longitude</label>
-                <input type="text" class="form-control" id="longitude" name="longitude" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Adresse</label>
-                <input type="text" class="form-control" id="address" name="address" required>
-            </div>
-            <div class="form-group">
-                <label for="url">Lien Web</label>
-                <input type="text" class="form-control" id="url" name="url">
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Ajouter</button>
-            </form>
-        </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal pour éditer un site -->
-<div class="modal fade" id="editSiteModal" tabindex="-1" aria-labelledby="editSiteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editSiteModalLabel">Modifier le Site</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title" id="signupLabel">Sign Up</h4>
             </div>
             <div class="modal-body">
-                <!-- Contenu chargé via AJAX -->
-                <div id="editSiteFormContent"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal pour gérer les propriétaires d'un site -->
-<div class="modal fade" id="manageOwnersModal" tabindex="-1" aria-labelledby="manageOwnersModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="manageOwnersModalLabel">Gérer les Propriétaires</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Contenu chargé via AJAX -->
-                <div id="manageOwnersFormContent"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal pour afficher les détails du site -->
-<div class="modal fade" id="siteModal" tabindex="-1" aria-labelledby="siteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="siteModalLabel">Détails du Site</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Le contenu sera inséré ici via AJAX -->
-                <div id="siteDetailsContent"></div>
+                <form role="form">
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign Up with Google</a>
+                        </div>
+                    </div>
+                    <div class="signOr">OR</div>
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Email Address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="explore.html" class="btn btn-lg btn-green">Sign Up</a>
+                        </div>
+                    </div>
+                    <p class="help-block">Already a Reales member? <a href="#" class="modal-si text-green">Sign In</a></p>
+                </form>
             </div>
         </div>
     </div>

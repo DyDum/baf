@@ -1,4 +1,4 @@
-<div id="map" style="height: 500px; width: 100%;" data-sites='<?= json_encode($sites) ?>'></div>
-<button class="btn btn-primary mt-3" data-toggle="modal" data-target="#addSiteModal">Ajouter un site</button>
-
-<script src="<?= $base_url ?>js/map.js"></script>
+<div id="mapView" class="mob-min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+<script>
+    let props = <?= json_encode($sites) ?>;  // Injection des données PHP dans la variable JS
+</script>

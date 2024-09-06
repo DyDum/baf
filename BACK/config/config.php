@@ -7,5 +7,5 @@ return [
         'user' => 'root',
         'password' => '',
     ],
-    'base_url' => '/'
+    'base_url' => '/BACK/public/'
 ];
