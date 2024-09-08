@@ -959,6 +959,30 @@ a.userHandler .counter {
     transition: all .2s ease-in-out;
     text-decoration: none;
 }
+#autocomplete-results {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#autocomplete-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#autocomplete-results div:hover {
+    background-color: #f0f0f0;
+}
+
+#autocomplete-error{
+    display: block;
+    color:red;
+    
+}
+
 .expanded .leftNav ul li a span {
     position: relative;
     width: auto;

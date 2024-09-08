@@ -13,6 +13,7 @@
         <link href="<?= $base_url ?>css/fileinput.min.css" rel="stylesheet">
         <link href="<?= $base_url ?>css/bootstrap.css" rel="stylesheet">
         <link href="<?= $base_url ?>css/app.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -210,12 +211,13 @@
     <script src="<?= $base_url ?>js/jquery.touchSwipe.min.js"></script>
     <script src="<?= $base_url ?>js/jquery.slimscroll.min.js"></script>
     <script src="<?= $base_url ?>js/jquery.visible.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-    <script src="<?= $base_url ?>js/infobox.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- <script src="<?= $base_url ?>js/infobox.js"></script> -->
     <script src="<?= $base_url ?>js/clndr.js"></script>
     <script src="<?= $base_url ?>js/jquery.tagsinput.min.js"></script>
     <script src="<?= $base_url ?>js/bootstrap-datepicker.js"></script>
     <script src="<?= $base_url ?>js/fileinput.min.js"></script>
+    <script src="<?= $base_url ?>js/responsive.js"></script>
     <script src="<?= $base_url ?>js/app.js"></script>
     <script src="<?= $base_url ?>js/calendar.js"></script>
 </body>

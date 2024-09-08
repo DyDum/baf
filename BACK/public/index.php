@@ -12,7 +12,7 @@ session_start();
 
 $router = new Router();
 $route = (include(__DIR__ . '/../config/config.php'))['base_url'];
-var_dump($route);
+
 // Routes pour la carte
 $router->add($route.'', [new MapController(), 'index']);
 $router->add($route.'add-site', [new SiteController(), 'addSite']);

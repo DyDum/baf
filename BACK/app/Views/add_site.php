@@ -17,6 +17,8 @@
             <div class="form-group">
                 <label>Adresse <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span></label>
                 <input class="form-control" type="text" id="address" placeholder="Entrer une adresse" autocomplete="off">
+                <div id="autocomplete-results"></div>
+                <div id="autocomplete-error"></div>
                 <p class="help-block">Vous pouvez déplacer le marqueur sur la carte</p>
             </div>
             <div class="row">
